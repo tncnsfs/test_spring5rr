@@ -1,0 +1,54 @@
+package com.Test;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Test_2021 {
+
+	public static void main(String[] args) throws IOException {
+		
+		int cnt = 0;  // count check 
+		
+		System.out.println("Test Start");
+		System.out.println("값을 입력 : ");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int num1 = sc.nextInt();
+		System.out.println("num1 =>: " + num1);
+		
+		int num2 = sc.nextInt();
+		System.out.println("num2 =>: " + num2);
+		
+//		int n = sc.nextInt();;  // 3 의 배수일때 3을 입력 
+		int n = 3;  // 3 의 배수일때 3을 입력, 배수 체크  
+		System.out.println("n is: " + n);
+		
+		int nber = 0; // 스와핑 바꾸기 용 변수 
+		if (num1 > num2) {
+			nber = num1;  
+			num1 = num2;  
+			num2 = nber; 
+			
+			
+			System.out.println("---num1 > num2 일때 num1 과 num2 값을 바꿔 치기, nber 은 바꿔치기용 --- ");
+			System.out.println("num1 -> " + num1);
+			System.out.println("num2 -> " + num2);
+			System.out.println("nber -> " + nber); 
+		}
+		for (int i = num1; i <= num2; i++) {
+			if (i% n == 0) {
+				System.out.println("---------------------------");
+				System.out.println("i --> " + i + "\t");
+				
+				cnt = cnt + 1; 
+				System.out.println("cnt  -->" + cnt + "회차");
+				System.out.println("");
+			}
+		}
+		
+		System.out.println("3의 배수로 cnt ===> " + cnt + "개 입니다." );
+
+	}
+
+}

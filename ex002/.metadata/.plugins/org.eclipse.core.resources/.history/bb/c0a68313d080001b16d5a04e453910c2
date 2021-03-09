@@ -1,0 +1,21 @@
+package tacos;
+
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
+@Data
+@RequiredArgsConstructor
+public class Ingredient {
+
+	public Ingredient(String id2, String name2, Type wrap) {
+		// TODO Auto-generated constructor stub
+	}
+
+	private final String id;
+	private final String name;
+	private final Type type;
+	
+	public static enum Type {
+		WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
+	}
+}

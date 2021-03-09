@@ -1,0 +1,41 @@
+package com.Test;
+
+import java.io.IOException;
+
+//클래스 구조 를 써보기
+//  00. 클래스는 : 클래스, 변수 , 메소드 로 크게 3개 부분으로 나뉠수 있다고 한다. (다른것도 있지만 구조만 보자면 이렇다는 거임.)
+//  01. 변수는 : 전역 변수 , 지역 변수 로 나눌수 있다. 
+//  02. 메소드는 메인메소드(main), 과 일반메소드(testMethod) 로 나눌수 있다 . 
+//  03. 
+
+// 클래스 
+public class Test_002 {
+	
+	String name = "Obama";  // 전역 변수 , 클래스 안에서 이동 가능  
+	
+	
+	// 메인 메소드는 실행 영역임, (메인 쉐프가 주방장에서 요리할 리스트를 체크후 결정하여 진행 하는거랑 마찬가지임. 
+	public static void main(String[] args) throws IOException {
+		
+		System.out.println("테스트를 해볼게요 . ");
+		
+		// 이걸 생성자라고 함. 생성자는 클래스를 붕어빵틀로 봤을때 빵틀에 찍혀 나온 붕어빵이라고 봐도 됨.
+			// 붕어빵틀에서 찍혀나온 붕어빵에는 붕어빵틀 안의 모든 것을 그대로 가졌다고 하여 인스턴스 객체로 인식 가능.
+			// 하여 인스턴스 객체 tt 로 클래스의 전역변수와 메소드를 접근 가능 . 
+		Test_002 tt = new Test_002();
+		
+		tt.testMethod("aaa"); // tt 생성자로 testMethod 메소드에 값 "aaa"를 넣어줌 
+		
+	}
+	
+	// 다른 메소드 사용하기 . 
+	void testMethod(String x) {  
+		// 괄호안은 파라미터라고 함, 변수는 뒤에 "=" 표시 후 값을 넣지만 , 메소드는 다른 곳에서 값을 넣어 줘야 함.
+		
+		String name2 = x; // name2 는 지역변수 , 메소드 안에서 선언, 초기화 했기 때문. 
+		
+		System.out.println("x -> name2 값 출력: " + name2);
+		
+	}
+
+}
